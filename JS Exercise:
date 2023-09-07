@@ -159,6 +159,13 @@ Exercise: Practice conditional statements
 Introduction
 In this exercise, you will practice working with if else statements. By the end of this exercise, you will be able to write an if else statement that determines your source of income based on your age. You will also be able to write a switch statement that determines your evening routine based on the day of the week.
 
+Tips
+If you need to make sure that multiple conditions are true in an if statement, you can do so using the && operator
+
+In JavaScript, the correct syntax of the "greater than or equal to" operator is: >=.
+
+Don't forget to add a break at the very end of each case in a switch statement.
+
 Complete the following steps to create: Are You Old Enough? 
 Declare a variable age using the var keyword and set it to the number 10.
 
@@ -172,6 +179,19 @@ Add an "else" statement to capture any other value. Inside the block, type "cons
 
 Try adjusting the age and executing the program to see how it will affect the output.
 
+var age = 10;
+if (age >= 65) {
+   console.log('You get your income from your pension')
+} else if (age < 65 && age >= 18) {
+   console.log('Each month you get a salary')
+} else if (age < 18) {
+   console.log('You get an allowance')
+} else {
+   //this block will run if no condition matches
+   console.log('The value of the age variable is not numerical')
+}
+
+
 Code the days of the week program as a switch statement
 On the next line, define a new variable, name it day, and set its value to "Sunday".
 
@@ -183,10 +203,33 @@ At the very bottom of the switch statement, add the default case and add a conso
 
 Finally, update the console.log calls for each case, based on whatever activity you have on each of the days.
 
-Tips
-If you need to make sure that multiple conditions are true in an if statement, you can do so using the && operator
 
-In JavaScript, the correct syntax of the "greater than or equal to" operator is: >=.
+var day = `Sunday`;
+switch(day) {
+   case 'Monday':
+       console.log('Read a book');
+       break;
+   case 'Tuesday':
+       console.log('Watch a movie');
+       break;
+   case 'Wednesday':
+       console.log('Read a book');
+       break;
+   case 'Thursday':
+       console.log('Play basketball');
+       break;
+   case 'Friday':
+       console.log('Socialize');
+       break;
+   case 'Saturday':
+       console.log('Chill');
+       break;
+   case 'Sunday':
+       console.log('Have barbecue');
+       break;
+   default:
+       //this block will run if no condition matches
+       console.log('There is no such day');
+}
 
-Don't forget to add a break at the very end of each case in a switch statement.
 
